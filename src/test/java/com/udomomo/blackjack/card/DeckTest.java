@@ -9,6 +9,7 @@ public class DeckTest {
 	void deckInit() {
 		Deck.init();
 		assertEquals(52, Deck.countAmount());
+		@SuppressWarnings("unused")
 		Card card = Deck.takeCard();
 		assertEquals(51, Deck.countAmount());
 	}
