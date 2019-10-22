@@ -1,7 +1,5 @@
 package com.udomomo.blackjack.card;
 
-import com.udomomo.blackjack.Util.Suit;
-
 public class Card {
 	private Suit suit;
 	private int rank;
@@ -17,6 +15,10 @@ public class Card {
 
 	public int getRank() {
 		return rank;
+	}
+
+	public String showDetail() {
+		return suit.toString() + ' ' + rank;
 	}
 
 	public int getScoreExceptAce() {
