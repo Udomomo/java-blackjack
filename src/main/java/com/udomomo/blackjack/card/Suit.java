@@ -1,5 +1,5 @@
 package com.udomomo.blackjack.card;
 
-enum Suit {
+public enum Suit {
 	Heart, Spade, Club, Diamond
 }
