@@ -7,9 +7,11 @@ import com.udomomo.blackjack.card.Card;
 import com.udomomo.blackjack.card.Deck;
 
 public class Hand {
+	private String playerName;
 	private List<Card> cards;
 
-	Hand() {
+	Hand(String name) {
+		playerName = name;
 		cards = new ArrayList<Card>();
 	}
 
@@ -17,7 +19,14 @@ public class Hand {
 		Card card = Deck.takeCard();
 		cards.add(card);
 		if (showCard) {
-			System.out.println(card);
+			System.out.println(playerName + ": " + card.showDetail());
 		}
+		else {
+			System.out.println(playerName + ": " + "Card Unknown");
+		}
+	}
+
+	public List<Card> getCards() {
+		return cards;
 	}
 }
