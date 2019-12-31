@@ -1,5 +1,8 @@
 package com.udomomo.blackjack.card;
 
+import lombok.Getter;
+
+@Getter
 public class Card {
 	private Suit suit;
 	private int rank;
@@ -7,14 +10,6 @@ public class Card {
 	Card(Suit suit, int rank) {
 		this.suit = suit;
 		this.rank = rank;
-	}
-
-	public Suit getSuit() {
-		return suit;
-	}
-
-	public int getRank() {
-		return rank;
 	}
 
 	public String showDetail() {
