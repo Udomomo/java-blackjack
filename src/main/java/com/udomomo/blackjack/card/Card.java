@@ -13,7 +13,7 @@ public class Card {
 	}
 
 	public String showDetail() {
-		return suit.toString() + ' ' + rank;
+		return suit.toString() + rank;
 	}
 
 	public int getScoreExceptAce() {
