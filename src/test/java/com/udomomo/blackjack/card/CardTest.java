@@ -8,6 +8,6 @@ public class CardTest {
 	@Test
 	void testShowDetail() {
 		Card card = new Card(Suit.Heart, 3);
-		assertEquals("Heart 3", card.showDetail());
+		assertEquals("Heart3", card.showDetail());
 	}
 }
