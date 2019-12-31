@@ -7,7 +7,7 @@ import java.util.stream.IntStream;
 
 public class Score {
 	public static List<Integer> totalScore(List<Card> cards) {
-		int scoreExceptAce = cards.stream().mapToInt(c -> c.getScoreExceptAce()).sum();
+		int scoreExceptAce = cards.stream().mapToInt(Card::getScoreExceptAce).sum();
 
 		int aceAmount = countAce(cards);
 		return IntStream.rangeClosed(0, aceAmount).map(i -> 11 * i + 1 * (aceAmount - i) + scoreExceptAce)
