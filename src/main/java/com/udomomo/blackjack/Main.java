@@ -16,16 +16,16 @@ public class Main {
 		Hand player = new Hand("Player");
 		Hand dealer = new Hand("Dealer");
 
+		// Both draw first 2 cards
 		dealer.draw();
 		System.out.println("Dealer's cards: " + dealer.showCurrentCards());
 		dealer.draw();
-		System.out.println("Dealer has drew one more card");
-		// Dealer's 2nd card is not shown yet
-
+		System.out.println("Dealer has drew one more card"); // Dealer's 2nd card is not shown yet
 		player.draw();
 		System.out.println("Player's cards: " + player.showCurrentCards());
 		player.draw();
 
+		// Player draws cards
 		while (true) {
 			System.out.println("Player's cards: " + player.showCurrentCards());
 			if (Score.isBlackJack(player.getCards())) {
@@ -50,6 +50,7 @@ public class Main {
 
 		System.out.println("Player's cards: " + player.showCurrentCards());
 
+		// Dealer draws cards
 		System.out.println("Dealer's turn.");
 		System.out.println("Dealer's cards: " + dealer.showCurrentCards());
 		while (Score.totalScore(dealer.getCards()).stream().noneMatch((s -> s >= 17))) {
@@ -67,6 +68,7 @@ public class Main {
 
 		System.out.println("Dealer stopped.");
 
+		// Compare score
 		int playerScore = Score.highestScore(player.getCards());
 		int dealerScore = Score.highestScore(dealer.getCards());
 		System.out.println("Player score: " + playerScore);
