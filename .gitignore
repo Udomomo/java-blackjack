@@ -8,6 +8,7 @@
 .settings
 
 .DS_Store
+.idea/
 
 
 target
